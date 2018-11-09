@@ -2,7 +2,7 @@ let links = document.querySelectorAll('.headerLink');
 let search = document.querySelector('#search');
 
 function fnoncroll(){
-    let scrolltop = document.documentElement.scrollTop;
+    let scrolltop = document.documentElement.scrollTop + 40;
     if (scrolltop > document.documentElement.clientHeight){
         links.forEach(function(item) {
             item.style.color = "black";

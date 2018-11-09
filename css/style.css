@@ -130,6 +130,7 @@ nav{
     height: 35px;   
     padding: 10px 33px;
     position: fixed;
+    z-index: 999;
 }
 nav > ul{
     display: flex;
@@ -325,11 +326,8 @@ header > a > i{
 
 /* ourLatestWork */
 
-.ourLatestWork{
+.ourLatestWork, .meetTheTeam{
     background-color: #54d154;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .ourLatestWork .buttonsContainer{
     display: flex;
@@ -377,52 +375,52 @@ header > a > i{
     background-color: green;
     margin: 15px;
 }
-.imagesContainer .img:nth-child(1){
+.ourLatestWork .imagesContainer .img:nth-child(1){
     background: url(../img/ourLatestWork/ourLatestWork1.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(2){
+.ourLatestWork .imagesContainer .img:nth-child(2){
     background: url(../img/ourLatestWork/ourLatestWork2.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(3){
+.ourLatestWork .imagesContainer .img:nth-child(3){
     background: url(../img/ourLatestWork/ourLatestWork3.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(4){
+.ourLatestWork .imagesContainer .img:nth-child(4){
     background: url(../img/ourLatestWork/ourLatestWork4.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(5){
+.ourLatestWork .imagesContainer .img:nth-child(5){
     background: url(../img/ourLatestWork/ourLatestWork5.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(6){
+.ourLatestWork .imagesContainer .img:nth-child(6){
     background: url(../img/ourLatestWork/ourLatestWork6.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(7){
+.ourLatestWork .imagesContainer .img:nth-child(7){
     background: url(../img/ourLatestWork/ourLatestWork7.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(8){
+.ourLatestWork .imagesContainer .img:nth-child(8){
     background: url(../img/ourLatestWork/ourLatestWork8.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(9){
+.ourLatestWork .imagesContainer .img:nth-child(9){
     background: url(../img/ourLatestWork/ourLatestWork9.jpg);
     background-position: center;
     background-size: cover;
 }
-.imagesContainer .img:nth-child(10){
+.ourLatestWork .imagesContainer .img:nth-child(10){
     background: url(../img/ourLatestWork/ourLatestWork10.jpg);
     background-position: center;
     background-size: cover;
@@ -430,8 +428,7 @@ header > a > i{
 .ourLatestWork .showMore{
     background-color: #2b9b2b;
     color: white;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* ourLatestWork */
@@ -503,12 +500,289 @@ header > a > i{
 .ourHappyClient{
     background-color: #f2f1f1;
 }
+.ourHappyClient ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 180px;
+    align-content: space-between;
+}
+.ourHappyClient ul li{
+    width: 21%;
+    height: 65px;
+    /* background-color: black; */
+}
+.ourHappyClient ul li:nth-child(1){
+    background: url(../img/ourHappyClient/ourHappyClient1.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ourHappyClient ul li:nth-child(2){
+    background: url(../img/ourHappyClient/ourHappyClient2.png) no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+.ourHappyClient ul li:nth-child(3){
+    background: url(../img/ourHappyClient/ourHappyClient3.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ourHappyClient ul li:nth-child(4){
+    background: url(../img/ourHappyClient/ourHappyClient4.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ourHappyClient ul li:nth-child(5){
+    background: url(../img/ourHappyClient/ourHappyClient5.png) no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+.ourHappyClient ul li:nth-child(6){
+    background: url(../img/ourHappyClient/ourHappyClient6.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ourHappyClient ul li:nth-child(7){
+    background: url(../img/ourHappyClient/ourHappyClient7.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.ourHappyClient ul li:nth-child(8){
+    background: url(../img/ourHappyClient/ourHappyClient8.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: 75%;
+}
+.ourHappyClient .showMore{
+    margin-top: 50px;
+    padding: 13px 30px;
+    color: #a59d9d;
+    font-size: 1rem;
+}
 
 /* ourLatestWork */
 
 
 
+/* meetTheTeam */
+
+.meetTheTeam{
+    padding-bottom: 0;
+}
+.meetTheTeam .participantCont{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 63px;
+}
+.meetTheTeam .participantCont > li{
+    max-width: 125px;
+}
+.meetTheTeam li .participant{
+    display: block;
+    width: 125px;
+    height: 125px;
+    border-radius: 100%;
+    position: relative;
+    margin-bottom: 97px;
+}
+.meetTheTeam li:nth-child(1) .participant{
+    background: url(../img/meetTheTeam/meetTheTeam1.jpg) no-repeat;
+    background-size: cover;
+}
+.meetTheTeam li:nth-child(2) .participant{
+    background: url(../img/meetTheTeam/meetTheTeam2.jpg) no-repeat;
+    background-size: cover;
+}
+.meetTheTeam li:nth-child(3) .participant{
+    background: url(../img/meetTheTeam/meetTheTeam3.jpg) no-repeat;
+    background-size: cover;
+}
+.meetTheTeam li:nth-child(4) .participant{
+    background: url(../img/meetTheTeam/meetTheTeam4.jpg) no-repeat;
+    background-size: cover;
+}
+.meetTheTeam li:nth-child(5) .participant{
+    background: url(../img/meetTheTeam/meetTheTeam5.jpg) no-repeat;
+    background-size: cover;
+}
+.meetTheTeam li .participant::after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 77px;
+    background-color: #207b20;
+    bottom: -87px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.meetTheTeam li p{
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+.iconsCont{
+    background-color: #c5e9c5;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 100px;
+    padding: 5px;
+    width: 84px;
+    margin: auto;
+    margin-top: 13px;
+}
+.iconsCont > li{
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    margin-left: 7px;
+}
+.iconsCont a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.iconsCont li:nth-child(1){
+    margin-left: 0;
+}
+.iconsCont li:nth-child(1) a{
+    background: url(../img/meetTheTeam/icon1.png);
+}
+.iconsCont li:nth-child(2) a{
+    background: url(../img/meetTheTeam/icon2.png);
+}
+.iconsCont li:nth-child(3) a{
+    background: url(../img/meetTheTeam/icon3.png);
+}
+.meetTheTeam .btnCont{
+    background-color: #3eba3e;
+    width: 100%;
+    padding: 27px 0;
+}
+.meetTheTeam .btnCont button{
+    font-size: 1rem;
+    background-color: #54d154;
+    color: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* meetTheTeam */
+
+
+
 /* footer */
+
+/* contactUs */
+
+.contactUs{
+    background-color: #333333;
+    color: #cccccc;
+}
+.contactUs .infoCont{
+    display: flex;
+    justify-content: space-between;
+}
+.contactUs .infoCont > li{
+    width: 30%;
+    min-width: 300px;
+}
+.contactUs .iconsCont{
+    background-color: #e6e7e6;
+}
+.contactUs .title{
+    font-size: 1.6rem;
+}
+.contactUs .title::after{
+    background-color: #cccccc;
+}
+.recentPosts li{
+    display: flex;
+    margin: 6px 0;
+}
+.recentPosts li:nth-child(1) a{
+    background: url(../img/ourLatestWork/ourLatestWork6.jpg);
+    background-size: cover;
+}
+.recentPosts li:nth-child(2) a{
+    background: url(../img/ourLatestWork/ourLatestWork7.jpg);
+    background-size: cover;
+}
+.recentPosts li:nth-child(3) a{
+    background: url(../img/ourLatestWork/ourLatestWork8.jpg);
+    background-size: cover;
+}
+.recentPosts li:nth-child(4) a{
+    background: url(../img/ourLatestWork/ourLatestWork10.jpg);
+    background-size: cover;
+}
+.recentPosts li:nth-child(5) a{
+    background: url(../img/ourLatestWork/ourLatestWork9.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.recentPosts li:nth-child(1) mark{
+    background-color: #54d154;
+}
+.recentPosts li:nth-child(3n-1) mark{
+    background-color: #ffba00;
+}
+.recentPosts li:nth-child(3) mark{
+    background-color: #089dea;
+}
+.recentPosts li:nth-child(4) mark{
+    background-color: #f34d04;
+}
+.recentPosts a{
+    display: block;
+    width: 54px;
+    height: 54px;
+    border-radius: 3px;
+    background-color: red;
+    margin-right: 5px;
+}
+.recentPosts p{
+    margin: auto 0;
+}
+.recentPosts p mark{
+    padding: 2px 5px;
+    font-size: 0.75rem;
+    color: white;
+}
+.formCont form{
+    margin-top: 15px;
+}
+.formCont input, textarea, input[type="submit"]{
+    border: none;
+}
+.formCont textarea{
+    resize: none;
+}
+.formCont input, textarea{
+    background-color: #444444;
+    width: 100%;
+    margin: 0;
+    padding: 10px 15px;
+    color: #cccccc;
+}
+.formCont input{
+    height: 32px;
+    margin-bottom: 3px;
+}
+.formCont input:first-child{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.formCont input[type="submit"]{
+    background-color: #2b9b2b;
+    margin-top: -2px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+/* contactUs */
+
+
 
 /* as seen on */
 
