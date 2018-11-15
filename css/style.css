@@ -35,6 +35,7 @@ main{
 }
 ul{
     list-style: none;
+    flex-wrap: wrap;
 }
 a{
     text-decoration: none;
@@ -95,7 +96,8 @@ section{
     padding-bottom: 60px;
 }
 .wrapper{
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 3%;
     margin: auto;
 }
 section > .wrapper > p{
@@ -109,7 +111,6 @@ section > .wrapper > p{
 
 /* header */
 header{
-    z-index: 999;
     width: 100vw;
     height: 100vh;
     background: url(../img/headerbg.jpg);
@@ -129,28 +130,35 @@ nav{
     width: 100%;
     height: 35px;   
     padding: 10px 33px;
-    position: fixed;
-    z-index: 999;
 }
 nav > ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
 }
-nav > ul > li{
+nav > ul li{
     padding-right: 20px;
 }
-nav > ul > li:nth-child(5){
-    padding-top: 5px;
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav li:nth-child(5){
     margin: 0 auto;
     font-family: 'Nautilus';
-    transform: scale(2);
-    padding-right: 100px;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    /* padding-left: 45%; */
 }
-nav > ul > li:nth-child(5) > a{
+nav li:nth-child(5) a{
     color: white;
+    font-size: 2.5rem;
     font-weight: 100;
-    z-index: 1000;
 }
-nav > ul > li > a.link::before{
+nav > ul li > a.link::before{
     content:'';
     position: absolute;
     width: 100%;
@@ -161,7 +169,7 @@ nav > ul > li > a.link::before{
     opacity: 0;
     transition: 0.25s;
 }
-nav > ul > li > a.link::after{
+nav > ul li > a.link::after{
     content:'';
     position: absolute;
     width: 100%;
@@ -172,9 +180,6 @@ nav > ul > li > a.link::after{
     opacity: 0;
     transition: 0.25s;
     z-index: -1;
-}
-nav > ul > li:nth-child(5) > a{
-    font-weight: 100;
 }
 nav > ul .link{
     transition: .25s;
@@ -191,16 +196,16 @@ nav > ul .link:hover::after{
     transition-delay: 0.25s;
     top: 20px;
 }
-nav > ul > li:not(:nth-child(5)):first-child > a.link::before{
+.nav li:first-child > a.link::before{
     opacity: 1;
 }
-nav > ul > li:first-child > a:hover::after{
+.nav li:first-child > a:hover::after{
     transition-delay: 0s;
 }
-nav > ul > li:last-child {
+.search li:last-child {
     position: relative;
 }
-nav > ul > li:last-child > input{
+.search input{
     height: 30px;
     opacity: 0.8;
     padding-left: 20px;
@@ -209,7 +214,7 @@ nav > ul > li:last-child > input{
     font-size: 1rem;
     transition: .25s;
 }
-nav > ul > li:last-child > button{
+.search button{
     display: block;
     cursor: pointer;
     width: 20px;
@@ -239,6 +244,7 @@ header > section{
 header > section > h1{
     font-size: 5.5rem;
     color: white;
+    text-align: center;
 }
 header > section > a{
     font-size: 1.5rem;
@@ -682,6 +688,7 @@ header > a > i{
 .contactUs .infoCont{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .contactUs .infoCont > li{
     width: 30%;
@@ -819,3 +826,110 @@ footer > p{
 }
 
 /* footer */
+
+
+@media all and (max-width: 960px){
+    .contactUs .infoCont{
+        justify-content: center;
+    }
+    .contactUs .infoCont > li{
+        margin: 0 20px;
+    }
+    .contactUs .infoCont{
+        justify-content: center;
+    }
+    .contactUs .infoCont > li{
+        margin: 0 20px;
+    }
+    .nav{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .nav li{
+        padding: 0;
+        margin: 0 10px;
+    }
+    .nav li:not(:nth-child(5)) a{
+        display: block;
+        margin-top: 15px;
+    }
+    .nav li:nth-child(5){
+        transform: translateX(0);
+        position: static;
+        margin: 0 10px;
+        order: -1;
+    }
+    .nav li:nth-child(1){
+        order: -3;
+    }
+    .nav li:nth-child(2){
+        order: -2;
+    }
+    .search{
+        display: none;
+    }
+}
+@media all and (max-width: 770px){
+    .contactUs .infoCont{
+        justify-content: center;
+    }
+    .contactUs .infoCont > li{
+        margin: 0 20px;
+    }
+    .whatWeDo ul{
+        justify-content: center;
+    }
+    .whatWeDo ul li{
+        margin: 20px;
+    }
+    /* .nav{
+        flex-direction: column;
+    } */
+    .nav li{
+        margin: 0;
+    }
+    .nav li a{
+        margin-top: 5px !important;
+        font-size: 0.8rem;
+    }
+    nav > ul .link:hover::after{
+        transition-delay: 0.25s;
+        top: 17px;
+    }
+    .nav li:nth-child(5) a{
+        font-size: 1.3rem;
+    }
+}
+@media all and (max-width: 475px){
+    nav{
+        padding: 10px 2% 0px 2%;
+    }
+    header > section > h1{
+        font-size: 4rem;
+    }
+    header > section > a{
+        font-size: 1rem;
+    }
+    .ourLatestWork .imagesContainer .img{
+        width: 30vw;
+        height: 30vw;
+    }
+    .carousel-control-prev{
+        left: 0%;
+    }
+    .carousel-control-next{
+        right: 0%;
+    }
+    .meetTheTeam .participantCont{
+        justify-content: center;
+    }
+    .meetTheTeam .participantCont > li{
+        margin: 20px;
+    }
+    .asSeenOn ul{
+        justify-content: center;
+    }
+    .asSeenOn ul li{
+        margin: 20px;
+    }
+}
