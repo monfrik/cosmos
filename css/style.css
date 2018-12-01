@@ -13,8 +13,11 @@
 }
 /* fonts */
 
-
-
+:root {
+    --main-color: #49e7df;
+    --dark-color: #004d7a;
+    --back-color: rgb(209, 255, 250);
+  }
 /* start of common styles */
 
 *{
@@ -63,14 +66,14 @@ a{
     color: #b7b3b3;
 }
 .title.green{
-    color: #207b20;
+    color: var(--dark-color);
 }
 .title.green::after{
-    background-color: #207b20;
+    background-color: var(--dark-color);
 }
 .title.green + p{
     text-align: center;
-    color: #2b9b2b;
+    color: var(--dark-color);
     font-size: 0.9rem;
 }
 .title::after{
@@ -96,8 +99,8 @@ section{
     padding-bottom: 60px;
 }
 .wrapper{
-    max-width: 1300px;
-    padding: 0 3%;
+    max-width: 1400px;
+    padding: 0 5%;
     margin: auto;
 }
 section > .wrapper > p{
@@ -113,16 +116,30 @@ section > .wrapper > p{
 header{
     width: 100vw;
     height: 100vh;
-    background: url(../img/headerbg.jpg);
+    /* background: url(../img/headerbg.jpg); */
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bfb5, #00ffff);
     background-size: cover;
     background-position-y: 80%;
     /* background-attachment:fixed; */
     display: flex;
     flex-direction: column;
     box-shadow: 0px 80px 100px rgba(0, 0, 0, 0.3) inset;
+    position: relative;
 }
 /* header */
 
+/* svg */
+
+header object{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    height: auto;
+    z-index: 0;
+}
+
+/* svg */
 
 /* start of nav */
 
@@ -164,7 +181,7 @@ nav > ul li > a.link::before{
     width: 100%;
     height: 5px;
     top: -5px;
-    background-color: #54d154;
+    background-color: var(--main-color);
     display: block;
     opacity: 0;
     transition: 0.25s;
@@ -175,7 +192,7 @@ nav > ul li > a.link::after{
     width: 100%;
     height: 5px;
     top: -5px;
-    background-color: #54d154;
+    background-color: var(--main-color);
     display: block;
     opacity: 0;
     transition: 0.25s;
@@ -235,18 +252,26 @@ nav > ul .link:hover::after{
 
 /* start of central section of header */
 
-header > section{
+header section{
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 10;
 }
-header > section > h1{
-    font-size: 5.5rem;
+header section > h1{
+    font-size: 4rem;
     color: white;
     text-align: center;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.7);
 }
-header > section > a{
+header section > h1 > mark{
+    background-color: inherit;
+    color: var(--main-color);
+    /* text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.7); */
+}
+header section > a{
     font-size: 1.5rem;
     color: white;
     font-weight: 100;
@@ -255,7 +280,13 @@ header > section > a{
     display: block;
     padding: 15px 30px;
     border-radius: 100px;
-    background-color: #64e464;
+    background-color: var(--main-color);
+    box-shadow: 7px 7px 0px 0px rgba(0, 0, 0, 0.7);
+    transition: .25s;
+}
+header section > a:hover{
+    transform: scale(1.2);
+    box-shadow: 13px 15px 0px 0px rgba(0, 0, 0, 0.6);
 }
 
 /* end of central section of header*/
@@ -265,13 +296,12 @@ header > section > a{
 /* start of scrolldown */
 
 header > a{
-    opacity: 0.7;
     margin: 0 auto 13px auto;
     width: auto;
     padding: 10px 20px;
     border-radius: 100px;
     background-color: white;
-    color: black
+    color: inherit;
 }
 header > a > i{
     font-size: 0.7rem;
@@ -306,14 +336,15 @@ header > a > i{
     border-radius: 30px;
     margin: 0 auto;
     padding: 25px;
-    background-color: #e1f3e1;
+    background-color: var(--back-color);
 }
-.whatWeDo object path{
-    fill: #54d154;
+.whatWeDo svg{
+    fill: var(--dark-color);
 }
 .whatWeDo figure h3{
     margin: 33px 0px 26px 0px;
     font-size: 2rem;
+    color: var(--dark-color);
 }
 .whatWeDo figure p{
     text-align: center;
@@ -321,7 +352,7 @@ header > a > i{
 .whatWeDo figure a{
     padding: 7px 21px;
     margin: 30px auto 0 auto;
-    background-color: #54d154;
+    background-color: var(--dark-color);
     color: white;
     border-radius: 100px;
 }
@@ -333,7 +364,7 @@ header > a > i{
 /* ourLatestWork */
 
 .ourLatestWork, .meetTheTeam{
-    background-color: #54d154;
+    background-color: var(--back-color);
 }
 .ourLatestWork .buttonsContainer{
     display: flex;
@@ -346,14 +377,14 @@ header > a > i{
     position: absolute;
 }
 .ourLatestWork .buttonsContainer input:checked + label{
-    background-color: #2b9b2b;
+    background-color: var(--dark-color);
     color: white;
 }
 .ourLatestWork .buttonsContainer label{
     padding: 10px 17px;
-    border: 1px solid #2b9b2b;
+    border: 1px solid var(--dark-color);
     background-color: white;
-    color: #2b9b2b;
+    color: var(--dark-color);
     font-weight: 600;
     transition: .25s;
     cursor: pointer;
@@ -378,7 +409,7 @@ header > a > i{
 .ourLatestWork .imagesContainer .img{
     width: 200px;
     height: 200px;
-    background-color: green;
+    background-color: #7090DC;
     margin: 15px;
 }
 .ourLatestWork .imagesContainer .img:nth-child(1){
@@ -432,7 +463,7 @@ header > a > i{
     background-size: cover;
 }
 .ourLatestWork .showMore{
-    background-color: #2b9b2b;
+    background-color: var(--dark-color);
     color: white;
     font-size: 1rem;
 }
@@ -443,6 +474,17 @@ header > a > i{
 
 /* testimonials */
 
+.testimonials{
+    background-color: var(--dark-color);
+    padding-bottom: 100px;
+    color: #ddd;
+}
+.testimonials .title, .testimonials .title + p{
+    color: #ddd;
+}
+.testimonials .title::after{
+    background-color: #ddd;
+}
 .testimonials ul{
     margin-top: 73px;
     position: relative;
@@ -478,6 +520,7 @@ header > a > i{
 .testimonials span{
     margin-top: 20px;
     display: flex;
+    
 }
 .testimonials span a{
     width: 45px;
@@ -495,6 +538,7 @@ header > a > i{
 .testimonials p mark{
     font-weight: normal;
     background-color: inherit;
+    color: #ddd;
 }
 
 /* testimonials */
@@ -617,7 +661,7 @@ header > a > i{
     position: absolute;
     width: 2px;
     height: 77px;
-    background-color: #207b20;
+    background-color: var(--dark-color);
     bottom: -87px;
     left: 50%;
     transform: translateX(-50%);
@@ -625,10 +669,10 @@ header > a > i{
 .meetTheTeam li p{
     text-align: center;
     font-size: 1.2rem;
-    color: white;
+    color: var(--dark-color);
 }
 .iconsCont{
-    background-color: #c5e9c5;
+    background-color: #c5d9e9;
     display: flex;
     justify-content: space-between;
     border-radius: 100px;
@@ -662,13 +706,13 @@ header > a > i{
     background: url(../img/meetTheTeam/icon3.png);
 }
 .meetTheTeam .btnCont{
-    background-color: #3eba3e;
+    background-color: var(--dark-color);
     width: 100%;
     padding: 27px 0;
 }
 .meetTheTeam .btnCont button{
     font-size: 1rem;
-    background-color: #54d154;
+    background-color: #0d699e;
     color: white;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.4);
 }
@@ -781,7 +825,7 @@ header > a > i{
     border-top-right-radius: 8px;
 }
 .formCont input[type="submit"]{
-    background-color: #2b9b2b;
+    background-color: var(--dark-color);
     margin-top: -2px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -795,40 +839,24 @@ header > a > i{
 
 .asSeenOn{
     background-color: #222;
+    color: white;
 }
-.asSeenOn h2{
-    color: #101010;
-    font-size: 1.6rem;
+.asSeenOn .title::after{
+    background-color: white;
 }
-.asSeenOn h2::after{
-    background-color: #101010;
-}
-.asSeenOn li{
-    height: 47px;
-}
-.asSeenOn ul{
-    display: flex;
-    justify-content: space-between;
-}
-.asSeenOn img{
-    max-height: 47px;
-    width: auto;
+.asSeenOn iframe{
+    width: 100%;
+    height: 60vh;
 }
 /* as seen on */
-
-
-
-footer > p{
-    background-color: black;
-    text-align: center;
-    color: white;
-    padding: 10px 0;
-}
 
 /* footer */
 
 
 @media all and (max-width: 960px){
+    header object{
+        width: 70vw;
+    }
     .contactUs .infoCont{
         justify-content: center;
     }
