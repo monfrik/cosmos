@@ -639,6 +639,7 @@ header > a > i{
 .meetTheTeam li:nth-child(1) .participant{
     background: url(../img/meetTheTeam/meetTheTeam1.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .meetTheTeam li:nth-child(2) .participant{
     background: url(../img/meetTheTeam/meetTheTeam2.jpg) no-repeat;
@@ -647,14 +648,17 @@ header > a > i{
 .meetTheTeam li:nth-child(3) .participant{
     background: url(../img/meetTheTeam/meetTheTeam3.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .meetTheTeam li:nth-child(4) .participant{
     background: url(../img/meetTheTeam/meetTheTeam4.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .meetTheTeam li:nth-child(5) .participant{
     background: url(../img/meetTheTeam/meetTheTeam5.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
 }
 .meetTheTeam li .participant::after{
     content: '';
